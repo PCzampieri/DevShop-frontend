@@ -54,7 +54,6 @@ const Edit = () => {
         id: router.query.id
       }
       const data = await updateUser(user)
-      console.log(data)
       if (data && !data.errors) {
         router.push('/users')
       }

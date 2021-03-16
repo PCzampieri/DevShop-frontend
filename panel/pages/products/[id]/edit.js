@@ -70,7 +70,6 @@ const ProductSchema = Yup.object().shape({
         if (response.errors) {
           return true
         }
-        console.log(id)
         if (response.data.getProductBySlug.id === id) {
           return true
         }
@@ -119,7 +118,6 @@ const Edit = () => {
         id: router.query.id
       }
       const data = await updateProduct(product)
-      console.log(data.errors)
       if (data && !data.errors) {
         router.push('/products')
       }
